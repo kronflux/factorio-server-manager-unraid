@@ -29,7 +29,8 @@ Check the Log of the Container to see the Inital Admin Password</Overview>
   <PostArgs/>
   <CPUset/>
   <Requires/>
-  <Config Name="FACTORIO_VERSION" Target="FACTORIO_VERSION" Default="stable" Mode="" Description="(stable or experimental)" Type="Variable" Display="always" Required="true" Mask="false">stable</Config>
+  <Config Name="Factorio Version" Target="FACTORIO_VERSION" Default="stable" Mode="" Description="(stable or experimental)" Type="Variable" Display="always" Required="true" Mask="false">stable</Config>
+  <Config Name="Autostart" Target="AUTOSTART" Default="false" Mode="" Description="(automatically start the factorio server when the server manager is started)" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="FSM Port" Target="80" Default="" Mode="tcp" Description="(check if Port is already used by other Contrainer)" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
   <Config Name="FSM Saves" Target="/opt/factorio/saves" Default="" Mode="rw" Description="(can be left as it is)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fsm_saves/</Config>
   <Config Name="FSM Mods" Target="/opt/factorio/mods" Default="" Mode="rw" Description="(can be left as it is)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fsm_mods</Config>
