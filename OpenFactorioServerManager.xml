@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FactorioServerManager</Name>
+  <Repository>kronflux/ofsm</Repository>
+  <Registry>https://hub.docker.com/r/kronflux/ofsm</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/kronflux/factorio-server-manager</Project>
+  <Overview>A tool for managing Factorio servers &#xD;
+This tool runs on a Factorio server and allows management of the Factorio server, saves, mods and many other features.&#xD;
+&#xD;
+ Features&#xD;
+- Allows control of the Factorio Server, starting and stopping the Factorio binary&#xD;
+- Allows the management of save files, upload, download and delete saves.&#xD;
+- Manage installed mods, upload new ones and more&#xD;
+- Manage modpacks, so it is easier to play with different configurations&#xD;
+- Allow viewing of the server logs and current configuration.&#xD;
+- Authentication for protecting against unauthorized users&#xD;
+&#xD;
+Check the Log of the Container to see the Inital Admin Password</Overview>
+  <Category>GameServers:</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/kronflux/factorio-server-manager-unraid/main/OpenFactorioServerManager.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/kronflux/factorio-server-manager-unraid/main/factorio-server-manager.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <Requires/>
+  <Config Name="FACTORIO_VERSION" Target="FACTORIO_VERSION" Default="stable" Mode="" Description="(stable or experimental)" Type="Variable" Display="always" Required="true" Mask="false">stable</Config>
+  <Config Name="FSM Port" Target="80" Default="" Mode="tcp" Description="(check if Port is already used by other Contrainer)" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="FSM Saves" Target="/opt/factorio/saves" Default="" Mode="rw" Description="(can be left as it is)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fsm_saves/</Config>
+  <Config Name="FSM Mods" Target="/opt/factorio/mods" Default="" Mode="rw" Description="(can be left as it is)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fsm_mods</Config>
+  <Config Name="FSM Config" Target="/opt/factorio/config" Default="" Mode="rw" Description="(can be left as it is)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fsm_config</Config>
+  <Config Name="Factorio Port" Target="34197" Default="" Mode="udp" Description="(factorio default udp port)" Type="Port" Display="always" Required="true" Mask="false">34197</Config>
+  <Config Name="Factorio Port 2" Target="4380" Default="" Mode="udp" Description="(factorio secondary udp port)" Type="Port" Display="always" Required="true" Mask="false">4380</Config>
+  <Config Name="RCON_PASS" Target="RCON_PASS" Default="" Mode="" Description="(password used for RCON access)" Type="Variable" Display="always" Required="true" Mask="true">factorio</Config>
+</Container>
